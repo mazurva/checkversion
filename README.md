@@ -18,3 +18,5 @@ HowTo на русском: http://githowto.com/ru
 Более развернутый вариант про Git: http://git-scm.com/book/ru
 
 Язык реализации PHP 5.3
+
+Быстрая справка по PHP: http://www.php.net/manual/ru/tutorial.php
