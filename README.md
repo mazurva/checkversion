@@ -10,3 +10,7 @@ Check version open library: Font Awesome, Bootstrap, Yii Framework, Yii-Booster 
 4. http://twitter.github.io/bootstrap/
 5. http://php.net
 6. http://mysql.com
+7. 
+
+
+HowTo на русском: http://githowto.com/ru
