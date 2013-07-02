@@ -14,4 +14,5 @@ Check version open library: Font Awesome, Bootstrap, Yii Framework, Yii-Booster 
 7. http://www.postgresql.org/
 
 HowTo на русском: http://githowto.com/ru
+
 Более развернутый вариант про Git: http://git-scm.com/book/ru
