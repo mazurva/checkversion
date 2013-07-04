@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <!--[if IE ]>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <![endif]-->
+    <title>MySQL ::  MySQL Downloads</title>
+
+    
+    <link rel="stylesheet" media="screen" href="/common/css/mysql.css?v=20121230" />
+    <link rel="stylesheet" media="projection" href="/common/css/mysql.css?v=20121230" />
+    <link rel="stylesheet" media="print" href="/common/css/print.css?v=20111230" />
+
+        
+    
+    
+    
+            <link rel="shortcut icon" href="/common/themes/sakila/favicon.ico" />
+
+        <script src="/common/js/clear_search_text.js"></script>
+
+    
+        
+    <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+    <!-- The following src attribute is not a typo, it is a protocol-relative URI -->
+    <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4fc7ca0b3e7d0a70"></script>
+
+    
+</head>
+
+<body class="downloads-community" >
+
+<div id="container">
+
+<!--UdmComment-->
+<a class="skipToContent" href="#mainContent">Skip navigation links</a>
+
+    <div id="header" >
+
+    <div class="left">
+
+    <div id="logo">
+                                            <a href="http://dev.mysql.com/" title="MySQL">
+                            <img src="/common/logos/logo-mysql-110x57.png" alt="MySQL" width="110" height="57" /></a>
+            </div>
+            <div id="tagline">The world's most popular open source database</div>
+
+    </div>
+
+    <div class="right">
+        
+        <div id="search_box"> <!-- Start Search -->
+        		<form id="searchform" name="searchform" method="get" action="http://search.oracle.com/search/search">
+			<input type="text" id="q" name="q" value="Search" class="swap_value" onfocus="clearSearchText();" />
+			<input type="hidden" id="search_dest" name="group" value="All"/>
+			<input type="image" src="/common/themes/sakila/search_g.png" id="go" alt="Search" title="Search" />
+		    </form>        </div> <!-- End Search -->
+
+                <div id="login" >
+                     <p><a href="https://dev.mysql.com/auth/login/?dest=http%3a%2f%2fdev.mysql.com%2Fdownloads%2F">Login</a> | <a href="https://dev.mysql.com/auth/register/">Register</a></p>
+                </div>
+    </div>
+
+    </div> 
+
+    <!-- MySQL Navigation -->
+    <div id="nav_container">
+
+    <div id="flags">
+        <ul>
+            <li style="position:relative; top:-5px;">
+                <!-- Icons from http://icondock.com/free/vector-social-media-icons //-->
+                <a href="http://www.facebook.com/mysql"><img src="/common/icons/facebook.png" alt="Facebook" title="Join us on Facebook" width="20" height="20" /></a>&nbsp;
+                <a href="https://twitter.com/#!/mysql"><img src="/common/icons/twitter.png" alt="Twitter" title="Follow us on Twitter" width="20" height="20" /></a>&nbsp;
+                <a href="http://www.youtube.com/mysqlchannel"><img src="/common/icons/youtube.png" alt="YouTube" title="Visit our YouTube channel" width="20" height="20" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+                            <br />
+                        </ul>
+    </div>
+    
+                        <div id="tab_second">
+
+        <ul>
+            <li class="first"><a href="http://dev.mysql.com">Developer Zone</a></li>
+            <li class="current"><a href="http://dev.mysql.com/downloads/">Downloads</a></li>
+            <li><a href="http://dev.mysql.com/doc/">Documentation</a></li>
+        </ul>
+        </div>
+
+                    
+
+
+    <div id="mysql_menu">
+        <ul>
+	<li class="current"><a class="current " href="/downloads/">Current</a>
+	
+		
+		
+	</li>
+	
+	<li class="link last"><a  href="http://downloads.mysql.com/archives.php">Archives</a>
+	
+		
+		
+	</li>
+	
+</ul>
+    </div>
+
+        <div id="og_sakila">&nbsp;</div>
+            <div id="og_title">&nbsp;</div>
+
+    </div>
+    <!-- End Navigation Container -->
+
+<!--/UdmComment-->
+
+<div class="page_container">
+
+    
+     <div class="page_sidebar">
+
+        <!--UdmComment-->
+
+        <div id="menu_title">
+                &nbsp;
+        </div>
+
+        <div id="menu">
+                <ul>
+	<li class="link"><a  href="http://www.mysql.com/downloads/">MySQL Enterprise Edition</a>
+	
+		
+		
+	</li>
+	
+	<li class="link"><a  href="http://www.mysql.com/downloads/">MySQL Cluster CGE</a>
+	
+		
+		
+	</li>
+	
+	<li class="link"><a  href="/downloads/mysql/">MySQL Community Server</a>
+	
+		
+		
+	</li>
+	
+	<li class="link"><a  href="/downloads/cluster/">MySQL Cluster</a>
+	
+		
+		
+	</li>
+	
+	<li class="link"><a  href="/downloads/tools/">MySQL Workbench & Utilities</a>
+	
+		
+		
+	</li>
+	
+	<li class="link"><a  href="/downloads/mysql-proxy/">MySQL Proxy</a>
+	
+		
+		
+	</li>
+	
+	<li class="link"><a  href="/downloads/connector/">MySQL Connectors</a>
+	
+		
+		
+	</li>
+	
+	<li class="link last"><a  href="/downloads/installer/">MySQL Installer (Windows)</a>
+	
+		
+		
+	</li>
+	
+</ul>
+        </div>
+
+        <br class="clear" />
+
+        
+        
+            
+                              <div class="promo11">
+	<h2 style="color: #e87c00; margin: 0px 0px 8px 0px">Contact Sales</h2>
+	<p style="font-size: 90%;">
+		USA: <span class="nobr">+1-866-221-0634</span><br />
+Canada: <span class="nobr">+1-866-221-0634</span></p>
+
+<p>Germany: <span class="nobr">+49 89 143 01280</span><br />
+France: <span class="nobr">+33 1 57 60 83 57</span><br />
+Italy: <span class="nobr">+39 02 249 59 120</span><br />
+UK: <span class="nobr">+44 207 553 8447</span></p>
+
+<p>Japan: <span class="nobr">0120-065556</span><br />
+China: <span class="nobr">10800-811-0823</span><br />
+India: <span class="nobr">0008001005870</span><br />
+Brazil: <span class="nobr">+55 11 5189-1097</span></p>
+
+<p><a href="http://www.mysql.com/about/contact/phone/">More Countries&nbsp;&raquo;</a>	</p>
+
+	<p><strong><a class="moreinfo"  href="http://www.mysql.com/about/contact/">Contact Us Online&nbsp;&raquo;</a></strong></p>
+
+	</div>
+
+
+            
+            
+
+            
+            
+
+            
+            
+                                            <div></div>
+                            
+            
+            
+        
+    <!--/UdmComment-->
+    </div>
+
+      
+<!-- Main content -->
+
+<div id="page" class="sidebar" >
+
+            <h1 class="page_header" id="mainContent">MySQL Downloads</h1>
+    
+
+
+
+
+	<div style="float: left; width: 60%;">
+
+<ul class="results noImage" style="margin-top: 5px;">
+
+    <li class="item" style="padding-top: 0px; border-bottom: none;">
+        <div class="promo15">
+            <a class="title" style="display:inline;" href="http://www.mysql.com/downloads/">MySQL Enterprise Edition</a>
+            <span class="subheading">(commercial)</span>
+            <span class="description">MySQL Enterprise Edition includes the most comprehensive set of advanced features and management tools for MySQL.</span>
+            <span class="linkAction"><a href="http://www.mysql.com/downloads/">Download</a></span>
+        </div>
+    </li>
+
+    <li class="item" style="padding-top: 0px;">
+        <div class="promo15">
+            <a class="title" style="display:inline;" href="http://www.mysql.com/downloads/">MySQL Cluster CGE</a>
+            <span class="subheading">(commercial)</span>
+            <span class="description">MySQL Cluster is a real-time, transactional database designed for
+            fast, always-on access to data under high throughput conditions. Plus, it includes everything
+            in MySQL Enterprise Edition.</span>
+            <span class="linkAction"><a href="http://www.mysql.com/downloads/">Download</a></span>
+        </div>
+    </li>
+
+    <li class="item">
+        <a class="title" style="display:inline;" href="/downloads/mysql/">MySQL Community Server</a>
+        <span class="subheading">(GPL)<br />(Current Generally Available Release: 5.6.12)</span>
+        <span class="description">MySQL Community Server is the world's most popular open source database.</span>
+        <span class="linkAction"><a href="/downloads/mysql/">Download</a></span>
+    </li>
+
+    <li class="item">
+        <a class="title" style="display:inline;" href="/downloads/cluster/">MySQL Cluster</a>
+        <span class="subheading">(GPL)<br />(Current Generally Available Release: 7.3.2)</span>
+        <span class="description">MySQL Cluster is a real-time, open source transactional database.</span>
+        <span class="linkAction"><a href="/downloads/cluster/">Download</a></span>
+    </li>
+
+    <li class="item">
+        <a class="title" style="display:inline;" href="/downloads/tools/workbench/5.2.html">MySQL Workbench</a>
+        <span class="subheading">(GPL)<br />(Current Generally Available Release: 5.2.47)</span>
+        <span class="description">MySQL Workbench is a next-generation visual database design application that can be used to efficiently design, manage and document database schemata. It is available as both, open source and commercial editions.</span>
+        <span class="linkAction"><a href="/downloads/tools/workbench/5.2.html">Download</a></span>
+    </li>
+
+    <li class="item">
+        <a class="title" style="display:inline;" href="/downloads/tools/utilities/1.3.html">MySQL Utilities</a>
+        <span class="subheading">(GPL)<br />(Current Alpha Release: 1.3.2)</span>
+        <span class="description">MySQL Utilities provides a collection of command-line utilities that are used for maintaining and administering MySQL servers.</span>
+        <span class="linkAction"><a href="/downloads/tools/utilities/1.3.html">Download</a></span>
+    </li>
+
+    <li class="item">
+        <a class="title" style="display:inline;" href="/downloads/mysql-proxy/">MySQL Proxy</a>
+        <span class="subheading">(GPL)<br />(Current Alpha Release: 0.8.3)</span>
+        <span class="description">MySQL Proxy is a simple program that sits between your client and MySQL server(s) that can monitor, analyze or transform their communication. Its flexibility allows for a wide variety of uses, including load balancing; failover; query analysis; query filtering and modification; and many more.</span>
+        <span class="linkAction"><a href="/downloads/mysql-proxy/">Download</a></span>
+    </li>
+
+    <li class="item" style="border-bottom: none; padding-bottom: 0;">
+        <a class="title" href="/downloads/connector/">MySQL Connectors</a>
+        <span class="description">MySQL offers standard database driver connectivity for using MySQL with applications and tools that are compatible with industry standards ODBC and JDBC.</span>
+    </li>
+
+</ul>
+
+<div style="margin-left: 5%;">
+    <ul class="results noImage">
+        <li class="item">
+            <a class="title" style="display:inline;" href="/downloads/connector/odbc/">Connector/ODBC</a>
+            <span class="subheading">(GPL)<br />(Current Generally Available Release: 5.2.5)</span>
+            <span class="description">Standardized database driver Windows, Linux, Mac OS X, and Unix platforms.</span>
+            <span class="linkAction"><a href="/downloads/connector/odbc/">Download</a></span>
+        </li>
+
+        <li class="item">
+            <a class="title" style="display:inline;" href="/downloads/connector/net/">Connector/Net</a>
+            <span class="subheading">(GPL)<br />(Current Generally Available Release: 6.7.4)</span>
+            <span class="description">Standardized database driver for .NET platforms and development.</span>
+            <span class="linkAction"><a href="/downloads/connector/net/">Download</a></span>
+        </li>
+
+        <li class="item">
+            <a class="title" style="display:inline;" href="/downloads/connector/j/">Connector/J</a>
+            <span class="subheading">(GPL)<br />(Current Generally Available Release: 5.1.25)</span>
+            <span class="description">Standardized database driver for Java platforms and development.</span>
+            <span class="linkAction"><a href="/downloads/connector/j/">Download</a></span>
+        </li>
+
+        <li class="item">
+            <a class="title" style="display:inline;" href="/downloads/connector/python/">Connector/Python</a>
+            <span class="subheading">(GPL)</span>
+            <span class="description">Standardized database driver for Python platforms and development.</span>
+            <span class="linkAction"><a href="/downloads/connector/python/">Download</a></span>
+        </li>
+
+        <li class="item">
+            <a class="title" style="display:inline;" href="/downloads/connector/cpp/">Connector/C++</a>
+            <span class="subheading">(GPL)<br />(Current Generally Available Release: 1.1.3)</span>
+            <span class="description">Standardized database driver for C++ development.</span>
+            <span class="linkAction"><a href="/downloads/connector/cpp/">Download</a></span>
+        </li>
+
+        <li class="item">
+            <a class="title" style="display:inline;" href="/downloads/connector/c/">Connector/C (libmysql)</a>
+            <span class="subheading">(GPL)<br />(Current Generally Available Release: 6.1.0)</span>
+            <span class="description">A client library for C development.</span>
+            <span class="linkAction"><a href="/downloads/connector/c/">Download</a></span>
+        </li>
+
+
+        <li class="item"><a class="title" href="/downloads/connector/php-mysqlnd">MySQL native driver for PHP (mysqlnd)</a><span class="description">The MySQL native driver for PHP is an additional, alternative way to connect from PHP 5.3 or newer to the MySQL Server 4.1 or newer.</span>
+        <span class="linkAction"><a href="/downloads/connector/php-mysqlnd/">More Info</a></span></li>
+    </ul>
+    </div>
+
+<br />
+    <h3>Contributed APIs</h3>
+    <ul>
+        <li><a href="dbi.html">DBI</a> for connecting to MySQL from Perl</li>
+
+        <li><a href="ruby.html">Ruby</a> for connecting to MySQL from Ruby</li>
+
+        <li><a href="http://tangentsoft.net/mysql++/">MySQL++</a> for connecting to MySQL from C++</li>
+
+        <li><a href="http://www.softintegration.com/products/toolkit/odbc/">Ch</a> for connecting to MySQL from Ch (C/C++ interpreter)</li>
+    </ul>
+
+
+    <h3>Other Downloads</h3>
+
+    <ul>
+        <li><a href="benchmarks.html">MySQL Benchmark Tool</a></li>
+        <li><a href="other/eventum/">Eventum</a> is a user-friendly and flexible issue tracking system</li>
+        <li><a href="/downloads/timezones.html">Time zone description tables</a></li>
+    </ul>
+
+    <h3>Mirrors</h3>
+    <ul>
+        <li><a href="/downloads/mirrors.html">MySQL Mirrors</a></li>
+        <li><a href="/downloads/how-to-mirror.html">How to Mirror</a></li>
+    </ul>
+    <br />
+</div>
+
+
+
+
+<div style="float: right; width: 30%;">
+<h3><a href="/downloads/rss.php" title="RSS Feed for new product releases"><img src="/common/img/rss-icon-16x16.gif" alt="RSS Feed for new product releases" width="16" height="16" /></a>&nbsp;New Releases</h3>
+      <ul>
+                <li><a href="http://dev.mysql.com/downloads/connector/python/1.0.html">Connector/Python 1.0</a><p class="subheading">(1.0.11 GA)</p></li>
+                <li><a href="http://dev.mysql.com/downloads/connector/net/6.7.html">Connector/Net 6.7</a><p class="subheading">(6.7.4 GA)</p></li>
+                <li><a href="http://dev.mysql.com/downloads/cluster/7.3.html">MySQL Cluster 7.3</a><p class="subheading">(7.3.2 GA)</p></li>
+                <li><a href="http://dev.mysql.com/downloads/cluster/7.2.html">MySQL Cluster 7.2</a><p class="subheading">(7.2.13 GA)</p></li>
+                <li><a href="http://dev.mysql.com/downloads/installer/5.5.html">MySQL Installer 5.5</a><p class="subheading">(5.5.32 GA)</p></li>
+              </ul>
+
+</div>
+
+
+
+</div> <!--End Container -->
+
+
+
+
+ </div> 
+</div> 
+<div id="footer">
+
+    <div class="links">
+        <ul>
+            <li class="top"><a href="http://dev.mysql.com">Developer Zone</a></li>
+	    <li><a href="http://dev.mysql.com/doc/">Documentation</a></li>
+            <li><a href="http://dev.mysql.com/articles/">Developer Articles</a></li>
+			<li><a href="http://dev.mysql.com/news-and-events/">News &amp; Events</a></li>
+            <li><a href="http://forums.mysql.com/">Forums</a></li>
+			<li><a href="http://lists.mysql.com/">Lists</a></li>
+            <li><a href="http://bugs.mysql.com/">Bugs</a></li>
+            <li><a href="http://dev.mysql.com/worklog/">Worklog</a></li>
+			            <li><a href="http://planet.mysql.com/">Planet MySQL</a></li>
+			            <li><a href="http://labs.mysql.com/">Labs</a></li>
+        </ul>
+    </div>
+
+    <div class="links">
+        <ul>
+            <li class="top"><a href="http://dev.mysql.com/downloads/">Downloads</a></li>
+            <li><a href="http://dev.mysql.com/downloads/mysql/">MySQL Community Server</a></li>
+            <li><a href="http://dev.mysql.com/downloads/mysql-proxy/">MySQL Proxy</a></li>
+            <li><a href="http://dev.mysql.com/downloads/cluster/">MySQL Cluster</a></li>
+            <li><a href="http://dev.mysql.com/downloads/workbench/">MySQL Workbench</a></li>
+            <li><a href="http://dev.mysql.com/downloads/connector/">MySQL Connectors</a></li>
+            <li><a href="http://downloads.mysql.com/archives.php">Archives</a></li>
+        </ul>
+    </div>
+
+    <div class="links">
+        <ul>
+            <li class="top"><a href="http://dev.mysql.com/doc/">Documentation</a></li>
+            <li><a href="http://dev.mysql.com/doc/">MySQL Reference Manuals</a></li>
+            <li><a href="http://dev.mysql.com/doc/index-gui.html">MySQL Workbench</a></li>
+            <li><a href="http://dev.mysql.com/doc/index-expert.html">Expert Guides</a></li>
+            <li><a href="http://dev.mysql.com/doc/index-topic.html">Topic Guides</a></li>
+            <li><a href="http://dev.mysql.com/doc/index-cluster.html">MySQL Cluster</a></li>
+            <li><a href="http://dev.mysql.com/doc/index-other.html">Other Documents</a></li>
+            <li><a href="http://dev.mysql.com/doc/index-about.html">About</a></li>
+            <li><a href="http://dev.mysql.com/doc/index-archive.html">Archives</a></li>
+        </ul>
+    </div>
+
+
+    <div class="links">
+        <ul>
+            <li class="top"><a href="http://www.mysql.com/about/">About MySQL</a></li>
+            <li><a href="http://www.mysql.com/about/contact/">Contact Us</a></li>
+                         <li><a href="http://www.mysql.com/buy-mysql/">How to Buy</a></li>
+			<li><a href="http://www.mysql.com/partners/">Partners</a></li>
+            <li><a href="http://www.mysql.com/about/jobs/">Job Opportunities</a></li>
+            <li><a href="http://www.mysql.com/sitemap.html">Site Map</a></li>
+	            </ul>
+	</div>
+
+	<div class="links">
+		<ul>
+			<li class="top"><a href="http://www.mysql.com/about/legal/">Legal</a></li>
+			<li><a href="http://www.mysql.com/about/legal/">Legal Policies</a></li>
+			<li><a href="http://www.oracle.com/us/legal/privacy/index.htm">Your Privacy Rights</a></li>
+			<li><a href="http://www.oracle.com/us/legal/terms/index.html">Terms of Use</a></li>
+			<li><a href="http://www.oracle.com/us/legal/third-party-trademarks/index.html">Trademark Policy</a></li>
+			<li><a href="http://www.oracle.com/technetwork/community/oca-486395.html">Contributor Agreement</a></li>
+		</ul>
+	</div>
+
+
+    <div id="search" class="en">
+	        <form id="footer_search" action="http://search.oracle.com/search/search" method="get">
+            <input type="text" id="f_q" name="q" value="" class="swap_value" onfocus="clearSearchText();" />
+	    <input type="hidden"  name="group" value="All"/>
+	    <input type="image" src="/common/themes/sakila/footer_search_g.png" id="f_go" alt="Search" title="Search" />
+        </form>    </div>
+
+</div><!-- End Footer -->
+		<div id="copyright-oracle"><a href="http://www.oracle.com/"><img src="/common/logos/logo-oracle-red-91x22.gif" alt="Oracle" width="91" height="22" /></a>&nbsp;&nbsp;<span>&copy; 2013, Oracle Corporation and/or its affiliates</span></div>
+
+
+<script src="/common/js/metrics/s_code_remote.js"></script>
+
+</body>
+</html>
