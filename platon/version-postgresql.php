@@ -1,5 +1,6 @@
 <?php
-$subject = file_get_contents('http://www.postgresql.org/');
+
+$subject = Parser::load('http://www.postgresql.org/');
 $text = '|<div id="pgFrontLatestReleasesWrap">(.*)</div>|Uis';
 preg_match ($text, $subject, $matches);
 $pattern = '|<b>(.*)</b>|Uis';

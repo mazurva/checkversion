@@ -1,5 +1,6 @@
 <?php
-$subject = file_get_contents('http://php.net/');
+
+$subject = Parser::load('http://php.net/');
 $text = '|<ol id="releases">(.*)</ol>|Uis';
 preg_match ($text, $subject, $matches);
 $pattern = '|<span class="release">(.*)</span>|Uis';

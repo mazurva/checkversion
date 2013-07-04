@@ -1,4 +1,6 @@
 <?php
+require('../parser/Parser.php');
+
 $path = dirname(__FILE__);
 $bootstrap = require($path . DIRECTORY_SEPARATOR . 'version-bootstrap.php');
 echo "$bootstrap";
