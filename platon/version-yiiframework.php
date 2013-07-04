@@ -1,6 +1,6 @@
 <?php
 $subject = file_get_contents('http://www.yiiframework.com/');
-$text = '/<div class="version".*>.*<b.*>(.*)<\/b>(.*)<\/div>/';
+$text = '/<div class="version".*>.*v(.*)<\/b>/';
 preg_match ($text, $subject, $matches);
-printf($matches[1]);
+return($matches[1] . "\n");
 ?>
