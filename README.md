@@ -3,6 +3,8 @@ CheckVersion
 
 Check version open library: Font Awesome, Bootstrap, Yii Framework, Yii-Booster and other
 
+Переписать классы парсинга PostgreSQL и MySQL с использованием библиотеки PHP Simple HTML DOM Parser: http://simplehtmldom.sourceforge.net/
+
 Ваша задача собрать информацию о текущей версии библиотек со следующих сайтов:
 
 1. http://yiiframework.com
