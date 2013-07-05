@@ -1,7 +1,7 @@
 <?php
 class Parser{
 
-	private $url = '';
+	protected $url = '';
 	private $content = '';
 
 	public function __construct($url){
