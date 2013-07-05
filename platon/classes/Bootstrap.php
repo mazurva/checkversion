@@ -5,7 +5,7 @@ class Bootstrap extends MyVersion{
 		$this->_name = 'Bootstrap';
 		$this->_homePage = 'http://twitter.github.io/bootstrap/';
 		$this->_parsePage = 'https://raw.github.com/twitter/bootstrap/master/package.json';
-		parent::__construct();
+		parent::__construct();                          //записала в $url содержимое $_parsePage
 	}
 
 	public function getVersion(){

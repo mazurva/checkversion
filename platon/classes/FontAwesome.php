@@ -1,5 +1,6 @@
 <?php
 class FontAwesome extends MyVersion{
+	
 	public function __construct(){
 		$this->_name = 'Font-Awesome';
 		$this->_homePage = 'http://fortawesome.github.io/Font-Awesome/';
