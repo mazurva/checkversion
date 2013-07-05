@@ -1,6 +1,26 @@
 <?php
-require('../parser/Parser.php');
+require('../parser/Version.php');
 
+$versions = MyVersion::getClasses(dirname(__FILE__).'/classes');
+
+foreach ($versions as $value) {
+	echo $value->name() . "\t-\t";
+	$version = $value->getVersion() ;
+	if(is_array($version)){
+		$first = true;
+		foreach ($version as $key => $value) {
+			if($first){
+				echo "\t";	
+				$first=false;
+			}else
+				echo "\t\t\t";
+			echo $value."\n";
+		}		
+	}else{
+		echo $version . "\n";
+	}
+}
+/*
 $path = dirname(__FILE__);
 $bootstrap = require($path . DIRECTORY_SEPARATOR . 'version-bootstrap.php');
 echo "$bootstrap";
@@ -27,5 +47,5 @@ $bootstrap = require($path . DIRECTORY_SEPARATOR . 'version-postgresql.php');
 foreach($out[1] as $key => $version)
     echo $version."\n";    
     
-    
+*/    
 ?>
