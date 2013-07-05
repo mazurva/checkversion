@@ -8,7 +8,7 @@ class Parser{
 		$this->url = $url;
 	}
 
-	public function getSiteContent(){				
+	public function getSiteContent(){				 // берется html код с помощью curl
 		$ch = curl_init ();		
 		curl_setopt ($ch , CURLOPT_URL , $this->url);
 		curl_setopt ($ch , CURLOPT_RETURNTRANSFER , 1 );
@@ -23,21 +23,21 @@ class Parser{
 		return $this->content;
 	}
 
-	public static function load($url){
-		$obj = new Parser($url);
+	public static function load($url){                    // эта функция пишется в других файлах
+		$obj = new Parser($url);                      // для выхова данного класса
 		return $obj->content();
 	}
 
 	private function getCache(){
-		$fileName = md5($this->url);
-		$pathCache = dirname(__FILE__).'/cache/';
+		$fileName = md5($this->url);                   // хэширование
+		$pathCache = dirname(__FILE__).'/cache/';      // путь к файлу в папке cache
 
-		if(!file_exists($pathCache))
-			mkdir($pathCache);
+		if(!file_exists($pathCache))                   // если папка не существует
+			mkdir($pathCache);                     //создадим его
 
-		if(file_exists($pathCache.$fileName)){			
-			if(time()-filemtime($pathCache.$fileName)<24*60*60){
-				$this->content = file_get_contents($pathCache.$fileName);
+		if(file_exists($pathCache.$fileName)){		                           //если файл существует	
+			if(time()-filemtime($pathCache.$fileName)<24*60*60){               //проверка на время создания
+				$this->content = file_get_contents($pathCache.$fileName);  //взять html код из файла
 			}
 		}
 
