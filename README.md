@@ -22,3 +22,5 @@ HowTo на русском: http://githowto.com/ru
 Язык реализации PHP 5.3
 
 Быстрая справка по PHP: http://www.php.net/manual/ru/tutorial.php
+
+Теперь список задач будет вестись в файле TODO.txt
