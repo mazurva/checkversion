@@ -19,8 +19,8 @@ class MyVersion extends Parser{
 		return $this->_homePage;
 	}
 
-	public function getVersion(){
-		return $this->content($this->_parsePage);
+	public function getVersion(){                             //получаем content из класса Parser
+		return $this->content();
 	}
 
 	public static function version($className=__CLASS__){

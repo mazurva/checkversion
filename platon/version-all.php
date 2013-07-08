@@ -1,5 +1,6 @@
 <?php
 require('../parser/Version.php');
+require('../parser/simple_html_dom.php');
 
 $versions = MyVersion::getClasses(dirname(__FILE__).'/classes');
 
