@@ -12,11 +12,10 @@ class Mysql extends MyVersion{
 	$content = parent::getVersion();
 	$text = '|<ul class="results noImage".*">.*MySQL Community Server.*Release:(.*)\)</span>|Uis';
         preg_match($text, $content, $matches);
-	return ($matches[1]);
+	return ("\t" . $matches[1]);
     }
     
 }
 ?>
-
 
 

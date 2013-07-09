@@ -20,6 +20,7 @@ foreach ($versions as $value) {
 	}else{
 		echo $version . "\n";
 	}
+	
 }
 /*
 $path = dirname(__FILE__);
