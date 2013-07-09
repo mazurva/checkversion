@@ -8,98 +8,58 @@
 <link type="text/css" rel="stylesheet" media="all" href="bootstrap/css/bootstrap-responsive.min.css" />
 </head>    
 <body>
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand">Текущие версии программ</a>
+    <ul class="nav">
+      <li><a href="#">Версии</a></li>
+      <li><a href="#">Справка</a></li>
+    </ul>
+  </div>
+</div>
 <table border="1" class="table table-hover">
-    <tr>
-        <td><h4>Bootstrap<br><a href="http://twitter.github.io/bootstrap" class="btn btn-success" onclick="return !window.open(this.href)">Перейти на сайт</a></h4>
-        </td>
-        <td>Текущая версия -
-            <?php
-require('parser/Parser.php');
-$path = dirname(__FILE__);
-$bootstrap = require($path . DIRECTORY_SEPARATOR . 'version-bootstrap.php');
-echo "$bootstrap";?>
-        </td>
-    </tr>
-      <tr>
-        <td><h4>Font-Awesome<br><a href="http://fortawesome.github.io/Font-Awesome/" class="btn btn-success" onclick="return !window.open(this.href)">Перейти на сайт</a></h4>
-        </td>
-        <td>Текущая версия - 
-            <?php
+    <?php
+    require('../parser/Version.php');
+    //require('../parser/Parser.php');
+include('../parser/simple_html_dom.php');
+    $versions = MyVersion::getClasses(dirname(__FILE__).'/classes');
 
-$path = dirname(__FILE__);
-$bootstrap = require($path . DIRECTORY_SEPARATOR . 'version-fontawesome.php');
-echo "$bootstrap";?>
+    foreach ($versions as $value) {
+        ?>
+        <tr>
+        <td><h4><?=$value->name()?><br><a href="<?=$value->homePage()?>" class="btn btn-success" onclick="return !window.open(this.href)">Перейти на сайт</a></h4>
         </td>
-    </tr>
-      <tr>
-        <td><h4>MySQL<br><a href="http://mysql.com" class="btn btn-success" onclick="return !window.open(this.href)">Перейти на сайт</a></h4>
-        </td>
-        <td>Текущая версия - 
-            <?php
-
-$path = dirname(__FILE__);
-$bootstrap = require($path . DIRECTORY_SEPARATOR . 'version-mysql.php');
-echo "$bootstrap";?>
-        </td>
-    </tr>
-      <tr>
-        <td><h4>YiiBooster<br><a href="http://yiibooster.clevertech.biz/" class="btn btn-success" onclick="return !window.open(this.href)">Перейти на сайт</a></h4>
-        </td>
-        <td>Текущая версия - 
-            <?php
-
-$path = dirname(__FILE__);
-$bootstrap = require($path . DIRECTORY_SEPARATOR . 'version-yiibooster.php');
-echo "$bootstrap";?>
-        </td>
-    </tr>
-      <tr>
-        <td><h4>Yiiframework<br><a href="http://yiiframework.com" class="btn btn-success" onclick="return !window.open(this.href)">Перейти на сайт</a></h4>
-        </td>
-        <td>Текущая версия - 
-            <?php
-
-$path = dirname(__FILE__);
-$bootstrap = require($path . DIRECTORY_SEPARATOR . 'version-yiiframework.php');
-echo "$bootstrap";?>
-        </td>
-    </tr>
-      <tr>
-        <td><h4>PHP<br><a href="http://php.net" class="btn btn-success" onclick="return !window.open(this.href)">Перейти на сайт</a></h4>
-        </td>
-        <td> <ul class="unstyled">
-        <?php
+        <td>Текущая версия 
+            
     
-$path = dirname(__FILE__);
-$ver = 'Текущая версия - ';
-$bootstrap = require($path . DIRECTORY_SEPARATOR . 'version-php.php');
-foreach($out[1] as $key => $version){
-    ?>
-    <li><?=$ver,$version?></li>
-    <?
-}
-        ?>        
+        <?        
+        $version = $value->getVersion() ;
+        if(is_array($version)){
+            ?>
+            
+            <ul class="unstyled">
+            <?
+            
+            foreach ($version as $key => $value) {
+                
+                ?><li><?=$value?></li><?
+            }   
+            ?>
         </ul>
+            <?    
+        }else{
+            echo $version ;
+        }
+        ?>
+        
+        <button class="btn btn-mini" type="button">Обновить версию</button>
         </td>
     </tr>
-    <tr>
-        <td><h4>PostgreSQL<br><a href="http://www.postgresql.org/" class="btn btn-success" onclick="return !window.open(this.href)">Перейти на сайт</a></h4>
-        </td>
-        <td> <ul class="unstyled">
-        <?php
-   
-$path = dirname(__FILE__);
-$ver = 'Текущая версия - ';
-$bootstrap = require($path . DIRECTORY_SEPARATOR . 'version-postgresql.php');
-foreach($out[1] as $key => $version){
+        <?
+    }
     ?>
-    <li><?=$ver,$version?></li>
-    <?
-}
-        ?>        
-        </ul>
-        </td>
-    </tr>
+    
+
 </table>
 
 
