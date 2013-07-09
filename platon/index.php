@@ -13,8 +13,8 @@
   <div class="navbar-inner">
     <a class="brand">Текущие версии программ</a>
     <ul class="nav">
-      <li><a href="">Версии</a></li>
-      <li><a href="manual.html" onclick="return !window.open(this.href)">Справка</a></li>
+      <li><a href="index.php">Версии</a></li>
+      <li><a href="manual.html">Справка</a></li>
     </ul>
   </div>
 </div>
