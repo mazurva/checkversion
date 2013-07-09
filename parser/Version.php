@@ -42,4 +42,18 @@ class MyVersion extends Parser{
 		}
 		return $versions;
 	}
+
+	public static function getClass($name, $path) {
+		$pathFile = $path.'/'.$name . ".php";
+		
+		if(is_file($pathFile)){
+				require($pathFile);
+				$className = $name; 	
+				$version = new $className;
+				$version->RewriteCache();
+				return $version;
+		}
+
+		return false;
+	}
 }

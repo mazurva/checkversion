@@ -6,6 +6,7 @@
 <link type="text/css" rel="stylesheet" media="all" href="bootstrap/css/bootstrap.min.css" />
 <link type="text/css" rel="stylesheet" media="all" href="bootstrap/css/bootstrap-responsive.css" />
 <link type="text/css" rel="stylesheet" media="all" href="bootstrap/css/bootstrap-responsive.min.css" />
+<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
 </head>    
 <body>
 <div class="navbar">
@@ -40,9 +41,9 @@ include('../parser/simple_html_dom.php');
             <ul class="unstyled">
             <?
             
-            foreach ($version as $key => $value) {
+            foreach ($version as $key => $v) {
                 
-                ?><li><?=$value?></li><?
+                ?><li><?=$v?></li><?
             }   
             ?>
         </ul>
@@ -52,7 +53,9 @@ include('../parser/simple_html_dom.php');
         }
         ?>
         
-        <button class="btn btn-mini" type="button">Обновить версию</button>
+        <button class="btn btn-mini" onclick="js: var mybutton = this; $.get('library.php', {'type': '<?=get_class($value)?>'}, function(data){
+            $(mybutton).parent().html(data);
+        }); return false;" type="button">Обновить версию</button>
         </td>
     </tr>
         <?
