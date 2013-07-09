@@ -1,14 +1,15 @@
 Иерархия папки проекта.
 1. В корневой папке проекта находятся 3 папки: documentation, parser и platon.
 1.1. В папке documentation находятся  4 текстовых документа: administrator's manual.txt,  description of the project structure.txt, programmer's manual.txt и user's manual.txt.
-1.2. В папке parser расположены файлы: Parser.php, simple_html_dom.php, Version.php, и папка cache.
+1.2. В папке parser расположены файлы: Parser.php, simple_html_dom.php, Version.php, UpdateCache.php и папка cache.
 1.2.1. В папке cache хранятся кэш-файлы.
 1.3. В папке platon лежат файлы: index.php, version-all.php и папка classes.
 1.3.1. В папке classes находятся файлы: Bootstrap.php, FontAwesome.php, Mysql.php, Php.php, Postgresql.php, YiiBooster.php, YiiFramework.php.
 -------------------------------------------------
 Библиотека simple_html_dom.php,находящаяся в папке parser, подключается к файлу index.php. Она позволяет определять версию PostgreSql.
 Библиотека Parser.php определяет откуда проекту брать контент сайтов: либо из кэша, либо из самих сайтов.
-Библиотека Version.php перебирает все исполняемые файлы для каждой программ: MySql, PHP, Booster и т.д. Класс Version.php наследуется от Parser.php. 
+Библиотека Version.php перебирает все исполняемые файлы для каждой программ: MySql, PHP, Booster и т.д. Класс Version.php наследуется от Parser.php.
+Библиотека UpdateCache.php необходима для автоматического ежедневного обновления кэша через cron. 
 В папке cache хранятся кеш-файлы.
 В папке platon хранятся файлы index.php, version-all.php и папка classes. Файл index.php исполняет наш проект через браузер, а файл version-all.php исполняет проект через терминал. 
 В папке classes расположены классы для каждых программ. Они унаследованы от Version.php. 
