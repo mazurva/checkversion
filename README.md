@@ -14,6 +14,7 @@ Check version open library: Font Awesome, Bootstrap, Yii Framework, Yii-Booster 
 5. http://php.net
 6. http://mysql.com
 7. http://www.postgresql.org/
+8. http://jquery.com
 
 HowTo на русском: http://githowto.com/ru
 
