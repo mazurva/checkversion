@@ -25,3 +25,5 @@ HowTo на русском: http://githowto.com/ru
 Быстрая справка по PHP: http://www.php.net/manual/ru/tutorial.php
 
 Теперь список задач будет вестись в файле TODO.txt
+
+Небольшая инструкция по работе с SQLite из PHP(англ. язык): http://zetcode.com/db/sqlitephp/
