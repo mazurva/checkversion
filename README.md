@@ -30,3 +30,4 @@ HowTo на русском: http://githowto.com/ru
 
 1. http://zetcode.com/db/sqlitephp/ (англ. язык)
 2. http://www.softtime.ru/info/articlephp.php?id_article=70 
+3. http://www.if-not-true-then-false.com/2012/php-pdo-sqlite3-example/ (англ. язык)
