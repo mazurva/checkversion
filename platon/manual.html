@@ -4,40 +4,58 @@
 <head>
 <title>Справка</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" rel="stylesheet" media="all" href="style.css" />
 <link type="text/css" rel="stylesheet" media="all" href="bootstrap/css/bootstrap.css" />
 <link type="text/css" rel="stylesheet" media="all" href="bootstrap/css/bootstrap.min.css" />
 <link type="text/css" rel="stylesheet" media="all" href="bootstrap/css/bootstrap-responsive.css" />
 <link type="text/css" rel="stylesheet" media="all" href="bootstrap/css/bootstrap-responsive.min.css" />
+<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <body>
-	<div class="navbar">
+    <div class="back"><a href="#" id="#irer"><button type="button" class="btn btn-large btn-primary disabled">Наверх</button></a></div>
+
+<div class="menu2">
+<div class="navbar">
   <div class="navbar-inner">
     <a class="brand">Справка</a>
     <ul class="nav">
-      <li><a href="index.php">Версии</a></li>
+      <li class="active"><a href="index.php">Версии</a></li>
       <li><a href="manual.html">Справка</a></li>
-      <li><a href="#user">Руководство пользователя</a></li>
     </ul>
   </div>
 </div>
-<h2>Иерархия папки проекта.</h2>
+</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+<div class="menu">
+     <ul class="nav nav-tabs nav-stacked">
+<li><a href="#user"><i class="icon-ok-circle"></i>Руководство пользователя</a></li>
+<li><a href="#admin"><i class="icon-ok-circle"></i>Руководство администратора</a></li>
+<li><a href="#prog"><i class="icon-ok-circle"></i>Руководство программиста</a></li>
+</ul>
+</div>
+    </div>
+    <div class="span10">
+     <div class="block1">
+<h2 id="irer">Иерархия папки проекта.</h2>
 <ol>
     <li>1. В корневой папке проекта находятся 3 папки: documentation, parser и platon.
         <ol>
             <li>1.1. В папке documentation находятся  4 текстовых документа: administrator's manual.txt,  description of the project structure.txt, programmer's manual.txt и user's manual.txt.</li>
             <li>1.2. В папке parser расположены файлы: Parser.php, simple_html_dom.php, Version.php, UpdateCache.php и папка cache.</li>
             <li>
-            	<ol>
-            		<li>1.2.1. В папке cache хранятся кэш-файлы.</li>
-            	</ol>
-            	</li>
+                <ol>
+                    <li>1.2.1. В папке cache хранятся кэш-файлы.</li>
+                </ol>
+                </li>
             <li>1.3. В папке platon лежат файлы: index.php, version-all.php и папка classes.</li>
             <li>
-            	<ol>
-            		<li>1.3.1. В папке classes находятся файлы: Bootstrap.php, FontAwesome.php, Mysql.php, Php.php, Postgresql.php, YiiBooster.php, YiiFramework.php.</li>
-            	</ol>
-            	</li>
+                <ol>
+                    <li>1.3.1. В папке classes находятся файлы: Bootstrap.php, FontAwesome.php, Mysql.php, Php.php, Postgresql.php, YiiBooster.php, YiiFramework.php.</li>
+                </ol>
+                </li>
         </ol>
     </li>
     <li></li>
@@ -49,7 +67,7 @@
 Библиотека UpdateCache.php необходима для автоматического ежедневного обновления кэша через cron. 
 В папке cache хранятся кеш-файлы.
 В папке platon хранятся файлы index.php, version-all.php и папка classes. Файл index.php исполняет наш проект через браузер, а файл version-all.php исполняет проект через терминал. 
-В папке classes расположены классы для каждых программ. Они унаследованы от Version.php.	
+В папке classes расположены классы для каждых программ. Они унаследованы от Version.php.    
 
 <h2 id="user">Руководство пользователя.</h2>
 <h5>Основной задачей данного проекта является сбор информации о последних версиях программных продуктов: MySQL, PHP, PostgreSQL, YiiBooster, YiiFremework, Boostrap и FontAwesome.</h5>
@@ -63,10 +81,33 @@
 <li>4. YiiBooster представляет собой набор виджетов, который облегчит задачу по разработке Yii приложений, а также, давая приложению небольшое повышение. Подробнее смотри тут: <a href="http://yiibooster.clevertech.biz/">http://yiibooster.clevertech.biz</a></li>
 <li>5. YiiFremework является свободным, открытым исходным кодом веб-разработки приложений написаны на PHP5, который способствует чистая, DRY дизайн и поощряет быстрое развитие. Он работает, чтобы упростить разработку приложений и помогает обеспечить чрезвычайно эффективным, расширяемый, и в сопровождении конечного продукта. Подробнее тут: <a href="http://www.yiiframework.com/">http://www.yiiframework.com</a></li>
 <li>6. Twitter Bootstrap — свободный набор инструментов для создания сайтов и веб-приложений. Включает в себя HTML и CSS шаблоны оформления для типографики, веб-форм, кнопок, меток, блоков навигации и прочих компонентов веб-интерфейсов, включая JavaScript расширения. Подробнее тут: <a href="http://twitter.github.io/bootstrap/">http://twitter.github.io/bootstrap</a></li>
-<li>7. FontAwesome это шрифтовые иконки для использования с Twitter Bootstrap. Подробнее: <a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome</a></li><br>
+<li>7. FontAwesome это шрифтовые иконки для использования с Twitter Bootstrap. Подробнее: <a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome</a></li></ul><br>
 
 Информация о версиях обновляется один раз в сутки. После того как информация обновилась, она будет браться из кэш-файла. Если же необходимо обновить версию, следует нажать кнопку обновить.<br>
 
-Для того, чтобы перейти на сайт программного продукта, необходимо нажать на кнопку "Перейти на сайт".
+Для того, чтобы перейти на сайт программного продукта, необходимо нажать на кнопку "Перейти на сайт".<br>
+
+<h2 id="admin">Руководство администратора.</h2>
+В данном проекте есть возможность настроить автоматическую проверку обновлений. Для этого понадобится файл UpdateCache.php, находящийся в папке parser, и программа cron. UpdateCache.php удаляет все существующие кэш-файлы, после чего создает новые. Программа cron позволяет запускать этот файл каждый заданный промежуток времени. Наиболее оптимальным промежутком времени в данной ситуации является каждые 24 часа, хотя можно задать и другой.<br><br> 
+Для того, чтобы настроить cron необходимо:
+<ul>
+<li>1. Зайти в терминал;</li>
+<li>2. Написать команду crontab -e;</li>
+<li>3. После выполнения второго пункта появится текстовый редактор "vi". Здесь необходимо указать, что необходимо выполнять и как часто. Первым делом нужно указать промежуток времени. Для этого пишем: "0 12 * * *". Эта запись означает, что программу нужно будет запускать каждый день в 12:00. Первая цифра "0" означает минуты (от 0 до 59), цифра "12" означает часы (от 0 до 23), первая звездочка означает дни месяца (от 1 до 31), вторая номер месяца в году (1 - 12), последняя обозначает дни недели(0-Вс,1-Пн,2-Вт,3-Ср,4-Чт,5-Пт,6-Сб,7-Вс). Символ "*" означает "каждый", то есть если на третем месте стоит "*", это означает что программу нужно выполнять каждый день.</li>
+<li>4. После того, как мы указали промежуток времени, нам нужно указать какой файл необходимо исполнять. Через пробел после указания промежутка времени пишем "php -f путь_к_файлу/UpdateCache.php". Естественно вместо путь_к_файлу нужно указать тот путь, где находится файл.</li>
+<li>5. Теперь необходимо сохранить и закрыть редактор vi. Для этого нужно нажать ESC, а затем набрать :wq.</li>
+</ul>
+Подробнее о программе cron можно посмотреть тут: <a href="http://masterhost.ru/support/doc/cron/">http://masterhost.ru/support/doc/cron</a>
+<h2 id="prog">Руководство программиста.</h2>
+
+В случае если какой либо скрипт перестал нормально работать, нужно скопировать еще раз весь репозиторий с сайта https://github.com с помощью команды git clone [url] или скопировать отдельные файлы с помощью команды git pull.
+Все команды пишутся через терминал. Чтобы написать команду нужно предварительно переместиться в папку /var/www/checkversion в терминале.
+Для того чтобы добавить новый сайт, нужно написать новый класс. В классе должны быть две функции: Функция с конструктором в котором содержатся: название сайта, страница сайта и страницу которую нужно парсить, Функция которая возвращает текущую версию программы.
+
+
+</div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
