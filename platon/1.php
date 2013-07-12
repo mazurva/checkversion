@@ -12,9 +12,10 @@ foreach ($versions as $value) {
 	if(is_array($version))
 		$version = json_encode($version);
 	
-	$update1 = "UPDATE versions SET (version, data_check) = ('$version', datetime('now'))";
+	$update1 = "UPDATE versions SET data_check = datetime('now') WHERE name = '{$value->name()}'";
 	$ok1 = $db->exec($update1);
-
+	$update1 = "UPDATE versions SET Version = '$version' WHERE name = '{$value->name()}'";
+	$ok1 = $db->exec($update1);
 
 	/*$stm1 = "INSERT INTO Versions VALUES('{$value->name()}', '$version', datetime('now'))";
 	$ok1 = $db->exec($stm1);
