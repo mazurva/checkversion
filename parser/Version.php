@@ -19,8 +19,8 @@ class MyVersion extends Parser{
 		return $this->_homePage;
 	}
 
-	public function getVersion(){
-		return $this->content($this->_parsePage);
+	public function getVersion(){                             //получаем content из класса Parser
+		return $this->content();
 	}
 
 	public static function version($className=__CLASS__){
@@ -41,5 +41,19 @@ class MyVersion extends Parser{
 			}
 		}
 		return $versions;
+	}
+
+	public static function getClass($name, $path) {
+		$pathFile = $path.'/'.$name . ".php";
+		
+		if(is_file($pathFile)){
+				require($pathFile);
+				$className = $name; 	
+				$version = new $className;
+				$version->RewriteCache();
+				return $version;
+		}
+
+		return false;
 	}
 }

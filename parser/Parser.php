@@ -3,9 +3,14 @@ class Parser{
 
 	protected $url = '';
 	private $content = '';
+	protected $notCache = false;
 
 	public function __construct($url){
 		$this->url = $url;
+	}
+
+	public function RewriteCache(){
+		$this->notCache = true;
 	}
 
 	public function getSiteContent(){				 // берется html код с помощью curl
@@ -19,7 +24,10 @@ class Parser{
 	}
 
 	public function content(){
-		$this->getCache();
+		if($this->notCache)
+			$this->setCache();
+		else
+			$this->getCache();
 		return $this->content;
 	}
 
@@ -47,7 +55,13 @@ class Parser{
 		return $this->content;
 	}
 
-	private function setCache($fileName){
+	private function setCache($fileName=null){
+		if(is_null($fileName)){
+			$fileName = md5($this->url);                   // хэширование
+			$pathCache = dirname(__FILE__).'/cache/';      // путь к файлу в папке cache
+			$fileName = $pathCache.$fileName;
+		}
+		
 		file_put_contents($fileName, $this->getSiteContent());
 	}
 }

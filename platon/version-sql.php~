@@ -1,6 +1,0 @@
-<?php
-$subject = file_get_contents('http://www.postgresql.org/');
-$text = '/<div id="pgFrontLatestReleasesWrap".*>.*<b.*>(.*).*<\/b>/';
-preg_match ($text, $subject, $matches);
-echo $matches[1];
-?>

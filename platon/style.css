@@ -1,0 +1,26 @@
+.menu {
+	width: 15%;
+	position: fixed;
+}
+
+.block1{
+	padding-top: 35px;
+}
+
+.back {
+	position: fixed;
+top: 630px;
+left: 20px;
+}
+
+.span2 {
+padding-top: 50px;
+
+}
+
+
+.menu2{
+	width: 100%;
+	position: fixed;
+}
+

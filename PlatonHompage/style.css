@@ -1,0 +1,61 @@
+.center{
+	width: 600px;
+	margin: 0 auto;
+}
+
+.welcomeHeader{
+	font: bold 40px Tahoma;
+	color:#008080;
+	margin: 0 auto;
+	width: 600px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.welcome{
+	width: 700px;
+	margin: 0 auto;
+}
+
+.image{
+	float: left;
+}
+
+.profile{
+	padding-top: 20px;
+}
+
+.Header{
+	font: bold 40px Tahoma;
+	color:#008080;
+	margin: 0 auto;
+	width: 600px;
+	padding-top: 30px;
+}
+
+.Contacts{
+	width: 600px;
+	margin: 0 auto;
+	color: black;
+	font:20px/30px Tahoma;
+}
+
+
+.red{
+	color: #FF0000;
+}
+
+.Education{
+	width: 600px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+p{
+	font-size: 20px;
+}
+
+.foto{
+	width: 700px;
+	margin: 0 auto;
+}
