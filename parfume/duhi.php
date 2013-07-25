@@ -67,7 +67,7 @@ class Parfum{
     public function GetInfoFromSite ($category, $product) {
     	$lev = "";
     	$maxlev = 70;
-    	$file = fopen ("info/img/info.txt","r+");
+    	//$file = fopen ("info/img/info.txt","rw+");
     	$subject = file_get_html('http://www.elite-parfume.ru/modules.php?name=Aromats');
         //echo ("Это из эксэля: " . $category . "\n" . "\n");
     	foreach($subject->find('table table table table table table[border=0] a') as $element) { 
@@ -81,22 +81,30 @@ class Parfum{
         } 
 
         echo $ssilka . "\n\n";
+        $url = $this->unparse_url(parse_url('http://www.elite-parfume.ru/' . $ssilka));
 
-
-        $subject = iconv( 'windows-1251', 'utf-8', file_get_contents('http://www.elite-parfume.ru/' . $ssilka));
+        $subject = iconv( 'windows-1251', 'utf-8', file_get_contents($url));
         $maxlev = 0;
         echo ("Это из эксэля: " . $product . "\n" . "\n");
         //$obj = $subject->find('table table table table table');
         
+        $subject = str_replace('</tr>', "</tr>\n", $subject);
 
-        preg_match_all("|<td><a href='(.*)'>(.*)</a></td>|Uis", $subject, $obj);
-        var_dump($subject);
+        preg_match_all("|<td><a href='(.*)'>(.*)<\/a><\/td>|Uism", $subject, $obj);
+        
+        foreach ($obj[2] as $key => $value) {
+            if(preg_match("|<td><a href='(.*)'>(.*)|", $value, $newobj)>0){                
+                $obj[1][$key] = $newobj[1];
+                $obj[2][$key] = $newobj[2];
+            }                
+        }
 
         $ssilka1 = '';
-    	foreach($obj as $element) { 
-            $x = $element->plaintext;
+        
+    	foreach($obj[2] as $key => $element) { 
+            $x = $element;
             $x = strtolower($x);    
-            $a = $element->href;
+            $a = $obj[1][$key];
             $levprocent = $this->compareStringWithSinonium($x, $product);
             
             if ($levprocent>$maxlev){                
@@ -109,6 +117,7 @@ class Parfum{
         }
 
         echo $ssilka1 . "\n";
+    
 
 
 
@@ -150,7 +159,18 @@ class Parfum{
 
 
 
-
+    private function unparse_url($parsed_url) { 
+      $scheme   = isset($parsed_url['scheme']) ? $parsed_url['scheme'] . '://' : ''; 
+      $host     = isset($parsed_url['host']) ? $parsed_url['host'] : ''; 
+      $port     = isset($parsed_url['port']) ? ':' . $parsed_url['port'] : ''; 
+      $user     = isset($parsed_url['user']) ? $parsed_url['user'] : ''; 
+      $pass     = isset($parsed_url['pass']) ? ':' . $parsed_url['pass']  : ''; 
+      $pass     = ($user || $pass) ? "$pass@" : ''; 
+      $path     = isset($parsed_url['path']) ? $parsed_url['path'] : ''; 
+      $query    = isset($parsed_url['query']) ? '?' . $parsed_url['query'] : ''; 
+      $fragment = isset($parsed_url['fragment']) ? '#' . $parsed_url['fragment'] : ''; 
+      return str_replace(' ', '+', "$scheme$user$pass$host$port$path$query$fragment"); 
+    } 
 
 
 
