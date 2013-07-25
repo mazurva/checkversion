@@ -40,6 +40,7 @@ class Exel
     */
 
 	public function ShowAll () {
+        $brand = '';
         $objPHPExcel = $this->LoadExcelFile();
         for ($row = 1; $row <= $this->GetHighestRow (); ++ $row)
         {
@@ -50,12 +51,13 @@ class Exel
                 $dataType = PHPExcel_Cell_DataType::dataTypeForValue($val);
                 if ($col == 1) {
                 	if (!$val=="") {
-	                    //echo $val . "\n";
+	                    $brand = $val;
 	                    $this->kolCategory++;
                 	}	
                 }
                 if ($col == 2) {
                 	if (!$val=="") {
+                        $sex = "";
                     	//echo $val . "\n";
                     	$this->kolProducts++;
                         //------------------------------------
@@ -78,6 +80,7 @@ class Exel
                         //------------------------------------
                     	if (!$name=="" or !$name7=="" or !$name8=="" or !$name9=="" or !$name10=="" or !$name11=="" or !$name12=="" or !$name13=="" or !$name14=="") {
                         	$this->kolMen++;
+                            $sex = "man";
                     	}
                         
                         /*if (!$name14=="" and $name3=="" and $name4=="") {
@@ -88,17 +91,32 @@ class Exel
                         //------------женская продукция-------------------
                     	if (!$name1 == "" or !$name2 == "" or !$name3 == "" or !$name4 == "" or !$name6 == "") {
                         	$this->kolLady++;
+                            $sex = "lady";
                     	}
                         
                         if (!$name5 == "" and $name == "" and $name1 == "") {
                             $this->kolLady++;
+                            $sex = "lady";
                         }
 
+                        echo "\n" . $val . "\n";
+                        echo "Брэнд этого продукта: " . $brand . "\n";
+                        if ($sex == ""){
+                            echo "Этот товар не относится ни к женской категории, ни к мужской" . "\n";
+                        }
+                        elseif ($sex == "man") {
+                            echo "Это мужской товар" . "\n";
+                        }
+                        elseif ($sex == "lady") {
+                            echo "Это женский товар" . "\n";
+                        }
 
 
                 	}	
                 }
             }
+
+
             
         }
         $this->kolUnname = $this->kolProducts - ($this->kolLady + $this->kolMen);
