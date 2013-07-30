@@ -29,8 +29,9 @@ class Exel
 	}*/
 
 	public function GetHighestRow () {
-		$highestRow = $this->objPHPExcel->getActiveSheet()->getHighestRow();
-		return $highestRow;
+        if(!isset($this->highestRow))
+		  $this->highestRow = $this->objPHPExcel->getActiveSheet()->getHighestRow();
+		return $this->highestRow;
 	}
 
 	/*public function GetTitle () {
@@ -42,12 +43,12 @@ class Exel
 	public function ShowAll () {
         $brand = '';
         $objPHPExcel = $this->LoadExcelFile();
-        for ($row = 1; $row <= $this->GetHighestRow (); ++ $row)
+        for ($row = 3; $row <= $this->GetHighestRow (); ++ $row)
         {
             for ($col = 1; $col <=2; ++ $col){
             
                 $cell = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow($col, $row);
-                $val = $cell->getValue();
+                $val = trim($cell->getValue());
                 $dataType = PHPExcel_Cell_DataType::dataTypeForValue($val);
                 if ($col == 1) {
                 	if (!$val=="") {
@@ -91,14 +92,27 @@ class Exel
                         //------------женская продукция-------------------
                     	if (!$name1 == "" or !$name2 == "" or !$name3 == "" or !$name4 == "" or !$name6 == "") {
                         	$this->kolLady++;
-                            $sex = "lady";
+                            $sex = "woman";
                     	}
                         
                         if (!$name5 == "" and $name == "" and $name1 == "") {
                             $this->kolLady++;
-                            $sex = "lady";
+                            $sex = "woman";
                         }
 
+                        $cell = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow(3, $row);
+                        $price = $cell->getValue();
+                        $price = is_numeric($price)?$price:0;
+
+                        $val = addslashes($val);
+
+                        if($sex == '')
+                            $sex = 'perfumery';
+
+                        echo "INSERT INTO `fleurdeparfum__good` (`name`, `brand_id`, `category_id`, `price`) 
+                        VALUES ('$val', (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE '$brand'),
+                            (SELECT `id` FROM `fleurdeparfum__category` WHERE `alias` = '$sex'), $price);\n";
+                        /*
                         echo "\n" . $val . "\n";
                         echo "Брэнд этого продукта: " . $brand . "\n";
                         if ($sex == ""){
@@ -110,7 +124,7 @@ class Exel
                         elseif ($sex == "lady") {
                             echo "Это женский товар" . "\n";
                         }
-
+                        */
 
                 	}	
                 }
@@ -132,8 +146,9 @@ class Exel
 
 
 	public function ShowCategories () {
+        $objPHPExcel = $this->LoadExcelFile();
 		$kolCategory = 0;
-        for ($row = 1; $row <= $highestRow; ++ $row)
+        for ($row = 1; $row <= $this->GetHighestRow(); ++ $row)
         {
             $col = 1; //считывается только столбец с категориями, т.е. столбец B
             
@@ -142,6 +157,7 @@ class Exel
                 $dataType = PHPExcel_Cell_DataType::dataTypeForValue($val);
                 if (!$val=="") {
                     //echo $val . "\n";
+                    echo "INSERT INTO `fleurdeparfum__brand` (`name`) VALUES ('".$val."');\n";
                     $kolCategory++;
                 }
             

@@ -111,20 +111,14 @@ class Parfum{
             	$maxlev =$levprocent;
             	$ssilka1 = $a;
             }
-            echo $x . "\n";
-            echo $levprocent . "\n";
-            echo $maxlev . "\n";            
+            //echo $x . "\n";
+            //echo $levprocent . "\n";
+            //echo $maxlev . "\n";            
         }
 
         echo $ssilka1 . "\n";
-    
-
-
-
-
-
       
-        /*$subject = file_get_html('http://www.elite-parfume.ru/' . $ssilka1);
+        $subject = file_get_html('http://www.elite-parfume.ru/' . $ssilka1);
         foreach($subject->find('table table table table table table table[border=0] img') as $element) {
             $im = $element->src;
             $image = new GetImage;
@@ -143,6 +137,7 @@ class Parfum{
             $info = $element->plaintext;                    
             if ( !$file ) { 
                 echo("Ошибка открытия файла"); 
+                return ;
             } 
             else { 
                 $probel = "\n";
@@ -152,7 +147,7 @@ class Parfum{
                         
             } 
                      
-        } fclose ($file);   */
+        } fclose ($file);   
     }
 
 
