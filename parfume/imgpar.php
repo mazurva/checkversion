@@ -64,7 +64,7 @@ default:
    $new_image_ext = 'jpg';
 }
 
-if(isSet($this->set_extension))
+if(isset($this->set_extension))
 {
 $ext = strrchr($this->source, ".");
 $strlen = strlen($ext);

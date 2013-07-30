@@ -5,33 +5,6 @@ require 'imgpar.php';
 
 class Parfum{
 
-	protected $highestRow;
-    protected $objPHPExcel;
-
-    public function LoadExcelFile (){
-        $this->objPHPExcel = PHPExcel_IOFactory::load("prays_dlya_sayta_2013.xls");
-        $this->objPHPExcel->setActiveSheetIndex(0);
-        return $this->objPHPExcel;
-    }
-
-
-    public function GetHighestRow () {
-    	if(!is_object($this->objPHPExcel))
-    		$this->LoadExcelFile();
-        $highestRow = $this->objPHPExcel->getActiveSheet()->getHighestRow();
-        return $highestRow;
-    }
-
-
-    public function GetExcel ($row, $col) {
-    	if(!is_object($this->objPHPExcel))
-    		$this->LoadExcelFile();
-    	$cell = $this->objPHPExcel->getActiveSheet()->getCellByColumnAndRow($col, $row);
-        $val = $cell->getValue();
-        $dataType = PHPExcel_Cell_DataType::dataTypeForValue($val);
-    	return $val;
-    }
-
     private function compareStringWithSinonium($str1, $str2){
         $maxp = 0;
         $sinonium = array(
@@ -116,12 +89,16 @@ class Parfum{
             //echo $maxlev . "\n";            
         }
 
-        echo $ssilka1 . "\n";
+        echo 'http://www.elite-parfume.ru/' . $ssilka1 . "\n";
       
         $subject = file_get_html('http://www.elite-parfume.ru/' . $ssilka1);
+
+        $image = array();
+        
         foreach($subject->find('table table table table table table table[border=0] img') as $element) {
             $im = $element->src;
-            $image = new GetImage;
+            $image []= 'http://www.elite-parfume.ru/' . $im;
+            /*$image = new GetImage;
             $image->source = 'http://www.elite-parfume.ru/' . $im;
             $image->save_to = 'info/img/';
 
@@ -130,11 +107,13 @@ class Parfum{
             if($get)
             {
                 echo 'Картинка сохранена' . "\n";
-            }
+            }*/
         }
-
-        foreach($subject->find('table table table table table table[border=0]') as $element) {
-            $info = $element->plaintext;                    
+        
+        //foreach($subject->find('table table table table table table[border=0]') as $element) {
+            $info = $subject->find('table table table table table table table', 0);    
+            return array($info->plaintext, $image);
+            /*                
             if ( !$file ) { 
                 echo("Ошибка открытия файла"); 
                 return ;
@@ -146,8 +125,10 @@ class Parfum{
                 fputs ( $file, $probel);
                         
             } 
+            */
                      
-        } fclose ($file);   
+        //} 
+        //fclose ($file);   
     }
 
 
