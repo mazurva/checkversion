@@ -1,7 +1,7 @@
 <?php
-require_once 'PHPExcel/IOFactory.php';
+//require_once 'PHPExcel/IOFactory.php';
 require 'simple_html_dom.php';
-require 'imgpar.php';
+
 
 class Parfum{
 
@@ -38,7 +38,8 @@ class Parfum{
     }
 
     public function GetInfoFromSite ($category, $product) {
-    	$lev = "";
+        $ssilka = '';
+    	$lev = "";        
     	$maxlev = 70;
     	//$file = fopen ("info/img/info.txt","rw+");
     	$subject = file_get_html('http://www.elite-parfume.ru/modules.php?name=Aromats');
@@ -48,23 +49,25 @@ class Parfum{
             $a = $element->href;
             $levprocent = $this->compareString($x, $category);
             if ($levprocent>$maxlev){
-            	$maxlev =$levprocent;
+            	$maxlev =$levprocent;                               
             	$ssilka = $a;
             }
         } 
 
-        echo $ssilka . "\n\n";
+        if($ssilka=='')return ; 
+        //echo $ssilka . "\n\n";
         $url = $this->unparse_url(parse_url('http://www.elite-parfume.ru/' . $ssilka));
 
         $subject = iconv( 'windows-1251', 'utf-8', file_get_contents($url));
+
         $maxlev = 0;
-        echo ("Это из эксэля: " . $product . "\n" . "\n");
+        //echo ("Это из эксэля: " . $product . "\n" . "\n");
         //$obj = $subject->find('table table table table table');
         
         $subject = str_replace('</tr>', "</tr>\n", $subject);
 
         preg_match_all("|<td><a href='(.*)'>(.*)<\/a><\/td>|Uism", $subject, $obj);
-        
+
         foreach ($obj[2] as $key => $value) {
             if(preg_match("|<td><a href='(.*)'>(.*)|", $value, $newobj)>0){                
                 $obj[1][$key] = $newobj[1];
@@ -81,7 +84,7 @@ class Parfum{
             $levprocent = $this->compareStringWithSinonium($x, $product);
             
             if ($levprocent>$maxlev){                
-            	$maxlev =$levprocent;
+            	$maxlev =$levprocent;                
             	$ssilka1 = $a;
             }
             //echo $x . "\n";
@@ -89,7 +92,8 @@ class Parfum{
             //echo $maxlev . "\n";            
         }
 
-        echo 'http://www.elite-parfume.ru/' . $ssilka1 . "\n";
+        if($ssilka1=='') return ;
+        //echo 'http://www.elite-parfume.ru/' . $ssilka1 . "\n";
       
         $subject = file_get_html('http://www.elite-parfume.ru/' . $ssilka1);
 
@@ -112,7 +116,10 @@ class Parfum{
         
         //foreach($subject->find('table table table table table table[border=0]') as $element) {
             $info = $subject->find('table table table table table table table', 0);    
-            return array($info->plaintext, $image);
+            if(trim($info->plaintext)==''){
+                return array("Описание временно отсутсвует", $image);    
+            }
+            return array(nl2br($info->plaintext), $image);
             /*                
             if ( !$file ) { 
                 echo("Ошибка открытия файла"); 
