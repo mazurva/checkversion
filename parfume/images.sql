@@ -3993,3 +3993,37 @@ INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacch-ozon
 				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI OZONE Pink Wave lady 30ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
 INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacch-pink.jpg',
 				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI PRECIOUS PINK lady  30ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacchini-pink.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI PRECIOUS PINK lady  30ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacch-pink.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI PRECIOUS PINK lady  50ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacchini-pink.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI PRECIOUS PINK lady  50ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacch-pink.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI South Beach Essence lady 30ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacchini-pink.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI South Beach Essence lady 30ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacc-stmen.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI STILE lady  30ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tac-stylemen.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI STILE lady  30ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacc-stmen.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI STILE lady  50ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tac-stylemen.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI STILE lady  50ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacc-active.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI With You lady  30ml edT  NEW' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tac-activemen.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI With You lady  30ml edT  NEW' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacc-active.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI With You lady  50ml edT  NEW' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tac-activemen.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI With You lady  50ml edT  NEW' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tacc-active.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI With You lady 100ml edT  NEW' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'tac-activemen.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='TACCHINI With You lady 100ml edT  NEW' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Sergio Tacchini')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'escentric-e01.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='ESCENTRIC MOLECULES Escentric 01 unisex 100ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Escentric Molecules')));
+INSERT INTO `fleurdeparfum__good_image` (`image`, `good_id`) VALUES( 'escentric-e02.jpg',
+				(SELECT id FROM `fleurdeparfum__good` WHERE `name`='ESCENTRIC MOLECULES Escentric 02 unisex 100ml edT' AND `brand_id` = (SELECT `id` FROM `fleurdeparfum__brand` WHERE `name` LIKE 'Escentric Molecules')));
